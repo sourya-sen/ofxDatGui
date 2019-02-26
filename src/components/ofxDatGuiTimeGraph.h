@@ -72,60 +72,60 @@ class ofxDatGuiTimeGraph : public ofxDatGuiComponent {
     
         void draw()
         {
-            if (!mVisible) return;
-            ofPushStyle();
-                ofxDatGuiComponent::draw();
-                ofSetColor(mStyle.color.inputArea);
-                ofDrawRectangle(x + mPlotterRect.x, y + mPlotterRect.y, mPlotterRect.width, mPlotterRect.height);
-                glColor3ub(mColor.fills.r, mColor.fills.g, mColor.fills.b);
-                (*this.*mDrawFunc)();
-            ofPopStyle();
+//            if (!mVisible) return;
+//            ofPushStyle();
+//                ofxDatGuiComponent::draw();
+//                ofSetColor(mStyle.color.inputArea);
+//                ofDrawRectangle(x + mPlotterRect.x, y + mPlotterRect.y, mPlotterRect.width, mPlotterRect.height);
+//                glColor3ub(mColor.fills.r, mColor.fills.g, mColor.fills.b);
+//                (*this.*mDrawFunc)();
+//            ofPopStyle();
         }
     
         void drawFilled()
         {
-            float px = this->x + mPlotterRect.x;
-            float py = this->y + mPlotterRect.y;
-            glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-            glBegin(GL_TRIANGLE_STRIP);
-            for (int i=0; i<pts.size(); i++) {
-                glVertex2f(px+ pts[i].x, py + mPlotterRect.height);
-                glVertex2f(px+ pts[i].x, py + pts[i].y);
-            }
-            glEnd();
+//            float px = this->x + mPlotterRect.x;
+//            float py = this->y + mPlotterRect.y;
+//            glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+//            glBegin(GL_TRIANGLE_STRIP);
+//            for (int i=0; i<pts.size(); i++) {
+//                glVertex2f(px+ pts[i].x, py + mPlotterRect.height);
+//                glVertex2f(px+ pts[i].x, py + pts[i].y);
+//            }
+//            glEnd();
         }
 
         void drawOutline()
         {
-            float px = this->x + mPlotterRect.x;
-            float py = this->y + mPlotterRect.y;
-            glLineWidth(mLineWeight);
-            glBegin(GL_LINE_LOOP);
-            glVertex2f(px+mPlotterRect.width, py+mPlotterRect.height);
-            for (int i=0; i<pts.size(); i++) glVertex2f(px+pts[i].x, py+pts[i].y);
-            glVertex2f(px, py+mPlotterRect.height);
-            glEnd();
+//            float px = this->x + mPlotterRect.x;
+//            float py = this->y + mPlotterRect.y;
+//            glLineWidth(mLineWeight);
+//            glBegin(GL_LINE_LOOP);
+//            glVertex2f(px+mPlotterRect.width, py+mPlotterRect.height);
+//            for (int i=0; i<pts.size(); i++) glVertex2f(px+pts[i].x, py+pts[i].y);
+//            glVertex2f(px, py+mPlotterRect.height);
+//            glEnd();
         }
     
         void drawLines()
         {
-            float px = this->x + mPlotterRect.x;
-            float py = this->y + mPlotterRect.y;
-            glLineWidth(mLineWeight);
-            glBegin(GL_LINE_STRIP);
-            for (int i=0; i<pts.size(); i++) glVertex2f(px+pts[i].x, py+pts[i].y);
-            glEnd();
+//            float px = this->x + mPlotterRect.x;
+//            float py = this->y + mPlotterRect.y;
+//            glLineWidth(mLineWeight);
+//            glBegin(GL_LINE_STRIP);
+//            for (int i=0; i<pts.size(); i++) glVertex2f(px+pts[i].x, py+pts[i].y);
+//            glEnd();
         }
     
         void drawPoints()
         {
-            float px = this->x + mPlotterRect.x;
-            float py = this->y + mPlotterRect.y;
-            glPointSize(mLineWeight);
-            glLineWidth(mLineWeight);
-            glBegin(GL_POINTS);
-            for (int i=0; i<pts.size(); i++) glVertex2f(px+pts[i].x, py+pts[i].y);
-            glEnd();
+//            float px = this->x + mPlotterRect.x;
+//            float py = this->y + mPlotterRect.y;
+//            glPointSize(mLineWeight);
+//            glLineWidth(mLineWeight);
+//            glBegin(GL_POINTS);
+//            for (int i=0; i<pts.size(); i++) glVertex2f(px+pts[i].x, py+pts[i].y);
+//            glEnd();
         }
     
         void setPosition(int x, int y)

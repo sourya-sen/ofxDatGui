@@ -26,7 +26,8 @@
 
 static bool ofxDatGuiIsHighResolution()
 {
-    return ((ofAppGLFWWindow*)ofGetWindowPtr())->getPixelScreenCoordScale() == 2;
+    //return ((ofAppGLFWWindow*)ofGetWindowPtr())->getPixelScreenCoordScale() == 2;
+    return true;
 }
 
 class ofxDatGuiTheme{
