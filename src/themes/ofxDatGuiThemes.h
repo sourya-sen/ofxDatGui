@@ -211,5 +211,16 @@ class ofxDatGuiThemeCandy : public ofxDatGuiTheme{
         }
 };
 
+class ofxDatGuiThemeSoundingBrush : public ofxDatGuiTheme{
+public:
+    
+    ofxDatGuiThemeSoundingBrush(){
+        font.size = 11;
+        layout.upperCaseLabels = false;
+        layout.height = 40;
+        init();
+    }
+};
+
 
 
